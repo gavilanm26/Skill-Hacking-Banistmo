@@ -30,19 +30,33 @@ public class testBanismo extends TestBase{
     @When("^Selecciono las opcione Proveedores del menú desplegado$")
     public void selecciono_las_opcione_Proveedores_del_menú_desplegado() throws Throwable {
         AcercaDeN.proveedores();
-        Thread.sleep(5000);
+        
     }
 
     @When("^por ultimo hago click en el boton Descarga el documento$")
     public void por_ultimo_hago_click_en_el_boton_Descarga_el_documento() throws Throwable {
+        Thread.sleep(5000);
         AcercaDeN.descargarDocumento();
     }
 
     @Then("^Valido que el informe generado sea el correcto$")
     public void valido_que_el_informe_generado_sea_el_correcto() throws Throwable {
-        /*(new WebDriverWait(driver, 30)).until(ExpectedConditions.numberOfWindowsToBe(2));
-        List<String> browserTabs = new ArrayList<String>(driver.getWindowHandles());
-        driver.switchTo().window(browserTabs .get(1));*/
+        String mainTab = driver.getWindowHandle();
+        String url_pdf = "";
+
+        Set<String> handles = driver.getWindowHandles();
+
+        for(String actual : handles){
+            if(!actual.equalsIgnoreCase(mainTab)){
+                driver.switchTo().window(actual);
+
+                //System.out.println(actual);
+                url_pdf = driver.getCurrentUrl();
+            }
+        }
+        leerpdf.leerPDFTest(url_pdf);
+
+        Assert.assertTrue("Archivo PDF no es correcto", leerpdf.isTextInicioDisplayed());
     }
 
     @When("^hago click en el contact center$")
