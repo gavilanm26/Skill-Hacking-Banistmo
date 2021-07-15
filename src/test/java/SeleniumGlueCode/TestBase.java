@@ -14,4 +14,5 @@ public class TestBase {
     protected acercaDeN AcercaDeN = PageFactory.initElements(driver, acercaDeN.class);
     protected chat Chat = PageFactory.initElements(driver, chat.class);
     protected chatBienvenido ChatBienvenido = PageFactory.initElements(driver, chatBienvenido.class);
+    protected LeerPDF leerpdf = PageFactory.initElements(driver, LeerPDF.class);
 }
