@@ -4,6 +4,7 @@ import POM.acercaDeN;
 import POM.chat;
 import POM.chatBienvenido;
 import POM.homePage;
+import POM.LeerPDF;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
