@@ -26,7 +26,11 @@ public class testBanismo extends TestBase{
     @When("^Selecciono las opcione Proveedores del menú desplegado$")
     public void selecciono_las_opcione_Proveedores_del_menú_desplegado() throws Throwable {
         AcercaDeN.proveedores();
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> b2607f6fe43216b711715b2193fcbfd846bf641c
     }
 
     @When("^por ultimo hago click en el boton Descarga el documento$")
@@ -37,7 +41,10 @@ public class testBanismo extends TestBase{
 
     @Then("^Valido que el informe generado sea el correcto$")
     public void valido_que_el_informe_generado_sea_el_correcto() throws Throwable {
+<<<<<<< HEAD
 
+=======
+>>>>>>> b2607f6fe43216b711715b2193fcbfd846bf641c
         String mainTab = driver.getWindowHandle();
         String url_pdf = "";
 
@@ -54,7 +61,10 @@ public class testBanismo extends TestBase{
         leerpdf.leerPDFTest(url_pdf);
 
         Assert.assertTrue("Archivo PDF no es correcto", leerpdf.isTextInicioDisplayed());
+<<<<<<< HEAD
 
+=======
+>>>>>>> b2607f6fe43216b711715b2193fcbfd846bf641c
     }
 
     @When("^hago click en el contact center$")

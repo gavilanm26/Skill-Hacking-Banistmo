@@ -1,6 +1,14 @@
 package SeleniumGlueCode;
 
+<<<<<<< HEAD
 import POM.*;
+=======
+import POM.acercaDeN;
+import POM.chat;
+import POM.chatBienvenido;
+import POM.homePage;
+import POM.LeerPDF;
+>>>>>>> b2607f6fe43216b711715b2193fcbfd846bf641c
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
