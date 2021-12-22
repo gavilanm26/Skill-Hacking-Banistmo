@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/Features",
         glue = {"SeleniumGlueCode"},
-        tags = {"@chat"}
+        tags = {"@smoke"}
 )
 public class runner {
 }

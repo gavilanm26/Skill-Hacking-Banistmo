@@ -4,7 +4,7 @@ Feature: Skill Hacking Banistmo
   Para: ingresar al enlace Acerca de Nosotros y otras opciones dentro
   y: descargar el documento Políticas de tratamiento y de protección de datos personales de proveedores
 
-  @documentoPoliticas
+  @documentoPoliticas @smoke
   Scenario: Descargar documento Bancolombia
     Given que ingreso a la pagina web de Bancolombia
     When hago click en el enlace Acerca de Nosotros
@@ -13,7 +13,7 @@ Feature: Skill Hacking Banistmo
     And por ultimo hago click en el boton Descarga el documento
     Then Valido que el informe generado sea el correcto
 
-    @chat
+    @chat @smoke
   Scenario Outline: diligenciar formulario Chat
     Given que ingreso a la pagina web de Bancolombia
     When hago click en el contact center
